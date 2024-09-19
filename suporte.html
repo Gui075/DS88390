@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Página Inicial</title>
+    <title>Suporte</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Estilos de animação para o título */
-        .welcome h1 {
+        /* Estilos de animação para o título principal */
+        .support h1 {
             opacity: 0;
             transform: translateY(-20px);
             animation: slideIn 1s forwards;
@@ -21,8 +21,8 @@
             }
         }
 
-        /* Animação para o parágrafo da seção de boas-vindas */
-        .welcome p {
+        /* Animação para o parágrafo da seção de suporte */
+        .support p {
             opacity: 0;
             transform: translateY(10px);
             animation: fadeIn 1s forwards 0.5s; /* Delay para o parágrafo */
@@ -35,28 +35,32 @@
             }
         }
 
-        /* Estilo e animação para os itens de desenvolvimento */
-        .development-item {
+        /* Estilo e animação para as opções de suporte */
+        .support-item {
             opacity: 0;
             transform: translateY(10px);
-            animation: fadeIn 1s forwards 1s; /* Delay para os itens */
+            animation: fadeIn 1s forwards;
             margin: 20px 0;
+            transition: transform 0.3s, box-shadow 0.3s;
             padding: 15px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .development-item:hover {
+        .support-item:hover {
             transform: scale(1.05);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
-        /* Animação para a imagem */
-        .welcome img {
-            opacity: 0;
-            transform: scale(0.9);
-            animation: fadeIn 1s forwards 1.5s; /* Delay de 1.5s para a imagem */
+        /* Sequência de animação para as opções de suporte */
+        .support-item:nth-child(1) {
+            animation-delay: 1s; /* Delay para a primeira opção */
+        }
+        .support-item:nth-child(2) {
+            animation-delay: 1.5s; /* Delay para a segunda opção */
+        }
+        .support-item:nth-child(3) {
+            animation-delay: 2s; /* Delay para a terceira opção */
         }
     </style>
 </head>
@@ -70,7 +74,7 @@
                     <ul class="dropdown-content">
                         <li><a href="consultoria.html">Consultoria</a></li>
                         <li><a href="suporte.html">Suporte</a></li>
-                        <li><a href="desenvolvimento.html">Desenvolvimento</a></li>
+                        <li><a href="#">Desenvolvimento</a></li>
                     </ul>
                 </li>
                 <li><a href="sobre.html">Sobre</a></li>
@@ -80,28 +84,21 @@
     </header>
 
     <main>
-        <section class="welcome">
-            <h1>Bem-vindo à Nossa Empresa</h1>
-            <p>Oferecemos soluções inovadoras em tecnologia para atender suas necessidades.</p>
-            <img src="download (1).jpg" alt="Descrição da Imagem" />
-        </section>
-
-        <!-- Seção de Desenvolvimento -->
-        <section class="development">
-            <h2>Desenvolvimento de Sistemas</h2>
-            <p>Nosso time de desenvolvimento cria soluções personalizadas para atender suas necessidades específicas.</p>
-            <div class="development-options">
-                <div class="development-item">
-                    <h3>Desenvolvimento Web</h3>
-                    <p>Construímos sites e aplicações web responsivas e otimizadas para todos os dispositivos.</p>
+        <section class="support">
+            <h1>Suporte Técnico</h1>
+            <p>Estamos aqui para ajudar! Veja abaixo as opções de suporte disponíveis:</p>
+            <div class="support-options">
+                <div class="support-item">
+                    <h2>Suporte 24/7</h2>
+                    <p>Oferecemos assistência técnica 24 horas por dia, 7 dias por semana. Entre em contato a qualquer momento.</p>
                 </div>
-                <div class="development-item">
-                    <h3>Aplicativos Móveis</h3>
-                    <p>Desenvolvemos aplicativos para Android e iOS, focando na experiência do usuário.</p>
+                <div class="support-item">
+                    <h2>Central de Ajuda</h2>
+                    <p>Acesse nossa Central de Ajuda para FAQs, tutoriais e guias de solução de problemas.</p>
                 </div>
-                <div class="development-item">
-                    <h3>Soluções Customizadas</h3>
-                    <p>Trabalhamos em projetos sob medida, desenvolvendo soluções que se encaixam perfeitamente em seu negócio.</p>
+                <div class="support-item">
+                    <h2>Chat ao Vivo</h2>
+                    <p>Fale diretamente com um de nossos especialistas através do chat ao vivo em nosso site.</p>
                 </div>
             </div>
         </section>
